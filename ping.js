@@ -251,5 +251,3 @@ main().catch((err) => {
   console.error('\n[Unhandled Exception]', err);
   process.exit(1);
 });
-
-console.log('HELLO WORLD');
