@@ -1,0 +1,407 @@
+[
+  {
+    "id": "ping-1",
+    "timestamp": "2026-07-26T16:15:33.706Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 793,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-2",
+    "timestamp": "2026-07-26T16:24:00.000Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 245,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-3",
+    "timestamp": "2026-07-26T16:29:00.000Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 312,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785084233317",
+    "timestamp": "2026-07-26T16:43:53.169Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 146,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785085377898",
+    "timestamp": "2026-07-26T17:02:57.522Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 375,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785085679506",
+    "timestamp": "2026-07-26T17:07:59.179Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 327,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785085980771",
+    "timestamp": "2026-07-26T17:13:00.627Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 144,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785086282359",
+    "timestamp": "2026-07-26T17:18:02.048Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 311,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785086583719",
+    "timestamp": "2026-07-26T17:23:03.546Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 173,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785086885080",
+    "timestamp": "2026-07-26T17:28:04.883Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 198,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785087186557",
+    "timestamp": "2026-07-26T17:33:06.259Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 298,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785087487866",
+    "timestamp": "2026-07-26T17:38:07.667Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 199,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785087789396",
+    "timestamp": "2026-07-26T17:43:09.179Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 217,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785088091041",
+    "timestamp": "2026-07-26T17:48:10.628Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 412,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785088392552",
+    "timestamp": "2026-07-26T17:53:12.241Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 310,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785088694046",
+    "timestamp": "2026-07-26T17:58:13.739Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 307,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785088995436",
+    "timestamp": "2026-07-26T18:03:15.240Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 196,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785089296874",
+    "timestamp": "2026-07-26T18:08:16.545Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 329,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785089598226",
+    "timestamp": "2026-07-26T18:13:18.035Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 191,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785089899459",
+    "timestamp": "2026-07-26T18:18:19.283Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 176,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785090200779",
+    "timestamp": "2026-07-26T18:23:20.611Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 168,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785090502296",
+    "timestamp": "2026-07-26T18:28:21.975Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 321,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785090803841",
+    "timestamp": "2026-07-26T18:33:23.475Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 367,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785091105183",
+    "timestamp": "2026-07-26T18:38:25.005Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 177,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785091406600",
+    "timestamp": "2026-07-26T18:43:26.369Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 230,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785091707946",
+    "timestamp": "2026-07-26T18:48:27.778Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 168,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785092009353",
+    "timestamp": "2026-07-26T18:53:29.152Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 201,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785092310713",
+    "timestamp": "2026-07-26T18:58:30.547Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 167,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785092612036",
+    "timestamp": "2026-07-26T19:03:31.863Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 173,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785092913513",
+    "timestamp": "2026-07-26T19:08:33.237Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 275,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785093214894",
+    "timestamp": "2026-07-26T19:13:34.720Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 174,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785093516414",
+    "timestamp": "2026-07-26T19:18:36.195Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 219,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785093817897",
+    "timestamp": "2026-07-26T19:23:37.587Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 310,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785094119352",
+    "timestamp": "2026-07-26T19:28:39.123Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 229,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785094420668",
+    "timestamp": "2026-07-26T19:33:40.515Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 152,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785094722398",
+    "timestamp": "2026-07-26T19:38:41.763Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 636,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785095023825",
+    "timestamp": "2026-07-26T19:43:43.507Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 319,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785095325323",
+    "timestamp": "2026-07-26T19:48:45.017Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 306,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785095626781",
+    "timestamp": "2026-07-26T19:53:46.472Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 309,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785095928276",
+    "timestamp": "2026-07-26T19:58:47.985Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 290,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785096229671",
+    "timestamp": "2026-07-26T20:03:49.472Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 200,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785096531246",
+    "timestamp": "2026-07-26T20:08:50.883Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 363,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785096832594",
+    "timestamp": "2026-07-26T20:13:52.425Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 169,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785097133993",
+    "timestamp": "2026-07-26T20:18:53.804Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 188,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1785097435331",
+    "timestamp": "2026-07-26T20:23:55.131Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 200,
+    "success": true,
+    "targetUrl": "https://nasiobot.onrender.com/"
+  }
+]
