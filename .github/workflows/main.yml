@@ -1,0 +1,40 @@
+name: Keep Alive Portfolio Service
+
+on:
+  schedule:
+    - cron: '0 0,5,10,15,20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ping:
+    name: Ping Render Web Service
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run 5.8-Hour Active Session (Pings Every 5 Minutes)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node ping.js
+
+      - name: Sync and push ping history log
+        if: always()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add pings.json
+          git diff-index --quiet HEAD || (git commit -m "Auto-update 5-min ping history log [skip ci]" && git push origin main)
