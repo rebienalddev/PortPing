@@ -1,14 +1,5 @@
 [
   {
-    "id": "ping-1785086282359",
-    "timestamp": "2026-07-26T17:18:02.048Z",
-    "status": 200,
-    "statusText": "OK",
-    "responseTimeMs": 311,
-    "success": true,
-    "targetUrl": "https://nasiobot.onrender.com/"
-  },
-  {
     "id": "ping-1785086583719",
     "timestamp": "2026-07-26T17:23:03.546Z",
     "status": 200,
@@ -8996,6 +8987,15 @@
     "status": 200,
     "statusText": "OK",
     "responseTimeMs": 149,
+    "success": true,
+    "targetUrl": "https://portfolio-frk8.onrender.com"
+  },
+  {
+    "id": "ping-1785886683863",
+    "timestamp": "2026-08-04T23:38:03.778Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 85,
     "success": true,
     "targetUrl": "https://portfolio-frk8.onrender.com"
   }
