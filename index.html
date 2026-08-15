@@ -520,10 +520,10 @@
       <div class="brand-group">
         <h1>
           <span class="prompt-symbol">&gt;_</span>
-          <span>NASIO BOT SERVER LOG</span>
+          <span>SERVICE CONSOLE LOG</span>
         </h1>
         <div class="console-sub">
-          <span>ENDPOINT: <a href="https://nasiobot.onrender.com/" target="_blank" class="endpoint-link">https://nasiobot.onrender.com/</a></span>
+          <span>TARGETS: <a href="https://portfolio-frk8.onrender.com" target="_blank" class="endpoint-link">Render App</a> | <a href="https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/" target="_blank" class="endpoint-link">Supabase Cloud DB</a></span>
           <span>| TZ: <strong>MANILA (PST)</strong></span>
         </div>
       </div>
@@ -637,6 +637,7 @@
                 <tr>
                   <th class="cell-id">#</th>
                   <th>TIMESTAMP (ASIA/MANILA PST)</th>
+                  <th>TARGET SERVICE</th>
                   <th>HTTP STATUS</th>
                   <th>LATENCY</th>
                   <th>RESULT</th>
@@ -644,7 +645,7 @@
               </thead>
               <tbody id="logsTableBody">
                 <tr>
-                  <td colspan="5" class="empty-msg">Loading telemetry log data...</td>
+                  <td colspan="6" class="empty-msg">Loading telemetry log data...</td>
                 </tr>
               </tbody>
             </table>
@@ -746,11 +747,13 @@
         const statusBadge = isSuccess
           ? `<span class="status-code-pill">[ ${item.status || 200} ${item.statusText || 'OK'} ]</span>`
           : `<span class="status-code-pill err">[ ${item.status || 'ERR'} ${item.statusText || 'FAIL'} ]</span>`;
+        const targetLabel = item.targetName || (item.targetUrl ? (item.targetUrl.includes('supabase') ? 'Supabase DB' : 'Render App') : 'Render App');
 
         return `
           <tr>
             <td class="cell-id">#${String(total - idx).padStart(3, '0')}</td>
             <td class="cell-time">${phTimeStr}</td>
+            <td style="font-size: 0.7rem; color: var(--text-gray);">${targetLabel}</td>
             <td>${statusBadge}</td>
             <td class="cell-latency">${item.responseTimeMs} ms</td>
             <td><strong>${isSuccess ? 'PASS' : 'FAIL'}</strong></td>
@@ -763,8 +766,10 @@
       const query = document.getElementById('searchInput').value.toLowerCase();
       const filtered = allPings.filter(p => {
         const phTime = formatPhilippineTime(p.timestamp).toLowerCase();
+        const targetStr = ((p.targetName || '') + ' ' + (p.targetUrl || '')).toLowerCase();
         return phTime.includes(query) ||
           p.timestamp.toLowerCase().includes(query) ||
+          targetStr.includes(query) ||
           (p.status && p.status.toString().includes(query)) ||
           (p.success ? 'pass' : 'fail').includes(query);
       });

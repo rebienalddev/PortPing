@@ -1329,6 +1329,7 @@
     "statusText": "OK",
     "responseTimeMs": 200,
     "success": true,
+<<<<<<< HEAD
     "targetUrl": "https://portfolio-frk8.onrender.com"
   },
   {
@@ -8998,5 +8999,78 @@
     "responseTimeMs": 143,
     "success": true,
     "targetUrl": "https://portfolio-frk8.onrender.com"
+=======
+    "targetUrl": "https://nasiobot.onrender.com/"
+  },
+  {
+    "id": "ping-1786823260037-362",
+    "timestamp": "2026-08-15T19:47:39.682Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 350,
+    "success": true,
+    "targetUrl": "https://portfolio-frk8.onrender.com",
+    "targetName": "Render Portfolio App"
+  },
+  {
+    "id": "ping-1786823260143-332",
+    "timestamp": "2026-08-15T19:47:40.040Z",
+    "status": 401,
+    "statusText": "Unauthorized",
+    "responseTimeMs": 102,
+    "success": true,
+    "targetUrl": "https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/",
+    "targetName": "Supabase Cloud Database"
+  },
+  {
+    "id": "ping-1786823275906-160",
+    "timestamp": "2026-08-15T19:47:55.346Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 557,
+    "success": true,
+    "targetUrl": "https://portfolio-frk8.onrender.com",
+    "targetName": "Render Portfolio App"
+  },
+  {
+    "id": "ping-1786823276065-770",
+    "timestamp": "2026-08-15T19:47:55.909Z",
+    "status": 401,
+    "statusText": "Unauthorized",
+    "responseTimeMs": 156,
+    "success": true,
+    "targetUrl": "https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/",
+    "targetName": "Supabase Cloud Database"
+  },
+  {
+    "id": "ping-1786823471275-614",
+    "timestamp": "2026-08-15T19:51:10.256Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 1017,
+    "success": true,
+    "targetUrl": "https://portfolio-frk8.onrender.com",
+    "targetName": "Render Portfolio App"
+  },
+  {
+    "id": "ping-1786823474133-785",
+    "timestamp": "2026-08-15T19:51:13.785Z",
+    "status": 200,
+    "statusText": "OK",
+    "responseTimeMs": 345,
+    "success": true,
+    "targetUrl": "https://portfolio-frk8.onrender.com",
+    "targetName": "Render Portfolio App"
+  },
+  {
+    "id": "ping-1786823474225-754",
+    "timestamp": "2026-08-15T19:51:14.134Z",
+    "status": 401,
+    "statusText": "Unauthorized",
+    "responseTimeMs": 91,
+    "success": true,
+    "targetUrl": "https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/",
+    "targetName": "Supabase Cloud Database"
+>>>>>>> 33b0bd9 (Configure 5-min Render and 24-hr Supabase keep-alive pings)
   }
 ]
