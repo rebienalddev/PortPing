@@ -1,40 +1,10 @@
 [
   {
-    "id": "ping-1787032799919-989",
-    "timestamp": "2026-08-18T05:59:59.258Z",
+    "id": "ping-1787033392756-221",
+    "timestamp": "2026-08-18T06:09:52.190Z",
     "status": 200,
     "statusText": "OK",
-    "responseTimeMs": 661,
-    "success": true,
-    "targetUrl": "https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1",
-    "targetName": "Supabase Cloud Database"
-  },
-  {
-    "id": "ping-1787032978048-751",
-    "timestamp": "2026-08-18T06:02:56.927Z",
-    "status": 200,
-    "statusText": "OK",
-    "responseTimeMs": 1121,
-    "success": true,
-    "targetUrl": "https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1",
-    "targetName": "Supabase Cloud Database"
-  },
-  {
-    "id": "ping-1787033304964-82",
-    "timestamp": "2026-08-18T06:08:24.019Z",
-    "status": 200,
-    "statusText": "OK",
-    "responseTimeMs": 943,
-    "success": true,
-    "targetUrl": "https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1",
-    "targetName": "Supabase Cloud Database"
-  },
-  {
-    "id": "ping-1787033341352-292",
-    "timestamp": "2026-08-18T06:09:00.766Z",
-    "status": 200,
-    "statusText": "OK",
-    "responseTimeMs": 584,
+    "responseTimeMs": 565,
     "success": true,
     "targetUrl": "https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1",
     "targetName": "Supabase Cloud Database"
