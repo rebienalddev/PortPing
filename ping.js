@@ -1,8 +1,7 @@
 /**
- * Render & Supabase Web Service Keep-Alive Ping Script (Instant Live Sync Edition)
+ * Supabase Web Service Keep-Alive Ping Script (Daily Ping Edition)
  * -------------------------------------------------------------------
- * Targets:
- *  - Render Portfolio App: Pinged EVERY 5 MINUTES (Keeps Render free web service warm)
+ * Target:
  *  - Supabase Cloud Database: Pinged ONCE DAILY (Every 24 Hours)
  */
 
@@ -19,18 +18,10 @@ const IS_FORCE_MODE = process.argv.includes('--force') || process.env.FORCE === 
 // Configuration
 const TARGET_URLS = [
   {
-    name: 'Render Portfolio App',
-    url: 'https://portfolio-frk8.onrender.com',
-    headers: {
-      'User-Agent': 'RenderKeepAlivePing/1.0 (+https://github.com)'
-    },
-    intervalMs: 0 // 0 = Ping on every 5-minute cycle
-  },
-  {
     name: 'Supabase Cloud Database',
     url: 'https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1',
     headers: {
-      'User-Agent': 'RenderKeepAlivePing/1.0 (+https://github.com)',
+      'User-Agent': 'SupabaseKeepAlivePing/1.0 (+https://github.com)',
       'apikey': 'sb_publishable_zFd8VxxbMxpu7wFblnC36w_8Np8JVVf',
       'Authorization': 'Bearer sb_publishable_zFd8VxxbMxpu7wFblnC36w_8Np8JVVf'
     },
@@ -40,11 +31,7 @@ const TARGET_URLS = [
 
 const MAX_RETRIES = 3;
 const RETRY_DELAY_MS = 10000; // 10 seconds delay between retries
-
-// Ping Interval: EXACTLY EVERY 5 MINUTES
-const PING_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
-// GitHub Actions maximum session duration: 350 minutes (~5.8 hours)
-const TOTAL_SESSION_DURATION_MS = 350 * 60 * 1000;
+const PING_INTERVAL_MS = 24 * 60 * 60 * 1000; // 24 Hours
 
 /**
  * Format a Date object into a readable UTC timestamp string.
@@ -276,60 +263,30 @@ async function runPingCycle() {
  */
 async function main() {
   console.log('====================================================');
-  console.log('  WEB SERVICE KEEP-ALIVE PINGER (Render & Supabase)');
+  console.log('    SUPABASE CLOUD DB KEEP-ALIVE PINGER (DAILY)');
   console.log('====================================================');
   TARGET_URLS.forEach((t, i) => {
-    const freq = t.intervalMs > 0 ? `${t.intervalMs / (1000 * 60 * 60)} Hours (Daily)` : 'Every 5 Minutes';
+    const freq = t.intervalMs > 0 ? `${t.intervalMs / (1000 * 60 * 60)} Hours (Daily)` : 'Every Cycle';
     console.log(`Target #${i + 1}      : ${t.name} [Frequency: ${freq}] -> ${t.url}`);
   });
   console.log(`Max Retries      : ${MAX_RETRIES}`);
-  console.log(`Cycle Interval   : EVERY 5 MINUTES`);
-  console.log(`Session Window   : 5.8 HOURS (350 MINUTES)`);
   console.log('====================================================');
 
-  if (IS_SINGLE_SHOT) {
-    const success = await runPingCycle();
-    process.exit(success ? 0 : 1);
-  } else if (IS_LOOP_MODE) {
-    console.log('[Info] Running continuously locally. Press Ctrl+C to stop.\n');
+  if (IS_LOOP_MODE) {
+    console.log('[Info] Running continuously locally (24-hour interval). Press Ctrl+C to stop.\n');
     await runPingCycle();
     while (true) {
-      console.log(`\n[Timer] Next cycle scheduled in 5 minutes (${new Date(Date.now() + PING_INTERVAL_MS).toLocaleTimeString()})...`);
+      console.log(`\n[Timer] Next cycle scheduled in 24 hours (${new Date(Date.now() + PING_INTERVAL_MS).toLocaleString()})...`);
       await setTimeout(PING_INTERVAL_MS);
       await runPingCycle();
     }
   } else {
-    // GitHub Actions Long Session Mode: Runs for 5.8 hours, checking targets EVERY 5 MINUTES
-    const sessionStartTime = Date.now();
-    let cycleCount = 0;
-    let anyFailure = false;
-
-    while (Date.now() - sessionStartTime <= TOTAL_SESSION_DURATION_MS) {
-      cycleCount++;
-      const nowStr = new Date().toLocaleTimeString();
-      console.log(`\n>>> [Ping Cycle #${cycleCount} at ${nowStr}] <<<`);
-      const success = await runPingCycle();
-
-      if (!success) {
-        anyFailure = true;
-      }
-
-      const elapsed = Date.now() - sessionStartTime;
-      const remaining = TOTAL_SESSION_DURATION_MS - elapsed;
-
-      if (remaining >= PING_INTERVAL_MS) {
-        console.log(`\n[Timer] Waiting 5 minutes until next cycle... (${Math.round(remaining / 60000)} min remaining in this GitHub Actions job)`);
-        await setTimeout(PING_INTERVAL_MS);
-      } else {
-        break;
-      }
-    }
-
+    // Default / Single-Shot Mode: Executes one ping cycle and exits
+    const success = await runPingCycle();
     console.log('\n====================================================');
-    console.log(` GITHUB JOB SESSION COMPLETE - Executed ${cycleCount} cycles across 5.8 hours.`);
+    console.log(` DAILY PING CYCLE COMPLETE - Result: ${success ? 'SUCCESS' : 'FAILED'}`);
     console.log('====================================================');
-
-    process.exit(anyFailure ? 1 : 0);
+    process.exit(success ? 0 : 1);
   }
 }
 

@@ -1,31 +1,29 @@
-# Render & Supabase Web Service Keep-Alive Service 🚀
+# Supabase Cloud Database Keep-Alive Service 🚀
 
-Automated GitHub Actions workflow and Node.js script that sends periodic HTTP GET requests to keep your free Render web service active and prevent Supabase project pausing due to inactivity.
+Automated GitHub Actions workflow and Node.js script that sends a daily HTTP request to keep your Supabase Cloud project active and prevent project pausing due to inactivity.
 
 ---
 
-## ⚙️ Target Endpoints & Schedule
+## ⚙️ Target Endpoint & Schedule
 
 | Target | Endpoint | Frequency |
 |---|---|---|
-| **Render Portfolio App** | `https://portfolio-frk8.onrender.com` | **Every 5 Minutes** (Prevents cold starts) |
 | **Supabase Cloud DB** | `https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1` | **Once Daily (Every 24h)** (Prevents project pausing) |
 
 ---
 
-## 📌 How Per-Target Scheduling Works
+## 📌 How Scheduling Works
 
-1. **Render App (5-min interval)**: Render free web services sleep after 15 minutes of inactivity. Pinging every 5 minutes ensures 100% uptime.
-2. **Supabase Cloud DB (24-hour interval)**: Supabase projects pause after 7 days of inactivity. A single ping once every 24 hours (86,400,000 ms) keeps the Supabase project active without generating unnecessary traffic.
-3. **Smart History Inspection**: The script checks [`pings.json`](pings.json) before each cycle to evaluate whether 24 hours have elapsed since the last Supabase ping.
+1. **Supabase Cloud DB (24-hour interval)**: Supabase free projects pause after 7 days of inactivity. A single database query request once every 24 hours keeps the Supabase project active without generating unnecessary traffic.
+2. **Smart History Inspection**: The script checks [`pings.json`](pings.json) before each cycle to evaluate whether 24 hours have elapsed since the last Supabase ping.
 
 ---
 
 ## ✨ Execution Flags
 
-- `node ping.js --single` : Executes a single cycle, respecting target schedules (skips Supabase if pinged <24h ago).
-- `node ping.js --single --force` : Forces an immediate ping to all targets, ignoring schedule delays.
-- `node ping.js --loop` : Runs locally in a continuous 5-minute loop.
+- `node ping.js` : Executes a daily ping cycle (respects 24-hour interval).
+- `node ping.js --force` : Forces an immediate ping attempt, ignoring schedule delays.
+- `node ping.js --loop` : Runs locally in a continuous 24-hour loop.
 
 ---
 
@@ -35,6 +33,6 @@ Commit and push updated files to GitHub:
 
 ```bash
 git add .
-git commit -m "Configure 5-minute Render pings and 24-hour daily Supabase pings"
+git commit -m "Configure daily Supabase keep-alive ping workflow"
 git push origin main
 ```
