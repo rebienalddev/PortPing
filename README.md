@@ -9,7 +9,7 @@ Automated GitHub Actions workflow and Node.js script that sends periodic HTTP GE
 | Target | Endpoint | Frequency |
 |---|---|---|
 | **Render Portfolio App** | `https://portfolio-frk8.onrender.com` | **Every 5 Minutes** (Prevents cold starts) |
-| **Supabase Cloud DB** | `https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/` | **Once Daily (Every 24h)** (Prevents project pausing) |
+| **Supabase Cloud DB** | `https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1` | **Once Daily (Every 24h)** (Prevents project pausing) |
 
 ---
 

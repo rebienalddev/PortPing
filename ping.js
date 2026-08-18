@@ -28,7 +28,7 @@ const TARGET_URLS = [
   },
   {
     name: 'Supabase Cloud Database',
-    url: 'https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/',
+    url: 'https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1',
     headers: {
       'User-Agent': 'RenderKeepAlivePing/1.0 (+https://github.com)',
       'apikey': 'sb_publishable_zFd8VxxbMxpu7wFblnC36w_8Np8JVVf',
@@ -175,8 +175,8 @@ async function sendPing(targetConfig, attemptNumber) {
 
     const endTime = performance.now();
     const duration = Math.round(endTime - startTime);
-    // For keep-alive, 200-299 is OK; 401 Unauthorized for Supabase endpoint confirms project server is awake
-    const isSuccess = response.ok || response.status === 401;
+    // Require 2xx HTTP OK status for successful keep-alive ping
+    const isSuccess = response.ok;
 
     console.log(`HTTP Status   : ${response.status} ${response.statusText}`);
     console.log(`Response Time : ${duration} ms`);
