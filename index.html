@@ -683,10 +683,7 @@
 
     // Embedded fallback dataset
     const fallbackPings = [
-      { id: '1', timestamp: new Date(Date.now() - 15 * 60 * 1000).toISOString(), status: 200, statusText: 'OK', responseTimeMs: 312, success: true },
-      { id: '2', timestamp: new Date(Date.now() - 10 * 60 * 1000).toISOString(), status: 200, statusText: 'OK', responseTimeMs: 245, success: true },
-      { id: '3', timestamp: new Date(Date.now() - 5 * 60 * 1000).toISOString(), status: 200, statusText: 'OK', responseTimeMs: 793, success: true },
-      { id: '4', timestamp: new Date().toISOString(), status: 200, statusText: 'OK', responseTimeMs: 146, success: true }
+      { id: '1', timestamp: new Date().toISOString(), status: 200, statusText: 'OK', responseTimeMs: 250, success: true, targetName: 'Supabase Cloud Database', targetUrl: 'https://ngjckggjadtoevbnhjhi.supabase.co/rest/v1/comments?select=id&limit=1' }
     ];
 
     let allPings = [];
@@ -747,7 +744,7 @@
         const statusBadge = isSuccess
           ? `<span class="status-code-pill">[ ${item.status || 200} ${item.statusText || 'OK'} ]</span>`
           : `<span class="status-code-pill err">[ ${item.status || 'ERR'} ${item.statusText || 'FAIL'} ]</span>`;
-        const targetLabel = item.targetName || (item.targetUrl ? (item.targetUrl.includes('supabase') ? 'Supabase DB' : 'Render App') : 'Render App');
+        const targetLabel = item.targetName || 'Supabase Cloud Database';
 
         return `
           <tr>
